@@ -1,16 +1,10 @@
 <% if user_signed_in? %>
     <span>Здравствуйте, <%= current_user.email %></span>
     <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
-    <%= form_tag ({controller: "api/v1/urls", action: "parser"}, method: "post") do |f| %>
-      <p>
-        <%= f.label :url %><br>
-        <%= f.text_field :url %>
-      </p>
-
-      <p>
-        <%= f.submit %>
-      </p>
-      <% end %>
+    <form action="api/v1/parser" method="post">
+    <input type="text" name="url" id="url">
+    <input type="submit">
+    </form>
 <% else %>
     <%= link_to 'Войти', new_user_session_path %> или <%= link_to 'Зарегистрироваться', new_user_registration_path %>
 <% end %>

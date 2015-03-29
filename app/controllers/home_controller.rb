@@ -6,7 +6,6 @@ class HomeController < ApplicationController
   
   def parser
     binding.pry
-     link = EmailParser::Parser.new(url_params).parser
     redirect_to 'home#index'
   end
 

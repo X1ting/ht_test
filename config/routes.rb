@@ -11,8 +11,7 @@ Rails.application.routes.draw do
 
   namespace :api do
       namespace :v1 do
-        post 'parser' => 'urls#parser'
-
+        post 'parser' => 'data#parser'
       end
     end
 end
