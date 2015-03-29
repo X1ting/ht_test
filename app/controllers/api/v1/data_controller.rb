@@ -1,13 +1,13 @@
 class Api::V1::DataController < ApplicationController
   skip_before_action :authenticate_user!
 
-	def parser
+  def parser
     binding.pry
     link = DataParser::Parser.new(url_params).parsing
-	end
+  end
 
 
-	private 
+  private 
 
   def url_params
     params[:url]
