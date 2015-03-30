@@ -1,1 +1,1 @@
- bundle exec unicorn start -p 3001
+web: bundle exec unicorn start -p 3000

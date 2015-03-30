@@ -17,7 +17,6 @@ module DataParser
         selector = "//a[starts-with(@href, \"mailto:\")]/@href"
         doc = Nokogiri::HTML(open(link)) rescue next
         email_address = doc.to_s.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i)
-        puts email_address
         addresses.push(email_address.to_s)
       end
       addresses.uniq

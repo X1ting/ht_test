@@ -9,6 +9,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'nokogiri'
 gem "rails_12factor", group: :production
+gem 'unicorn'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
