@@ -10,7 +10,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'nokogiri'
 gem "rails_12factor", group: :production
 gem 'unicorn'
-gem 'rack-timeout'
 
 group :development, :test do
   gem 'byebug'
