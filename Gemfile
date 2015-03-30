@@ -28,6 +28,4 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
 end
-group :production do
-  gem 'unicorn'
-end
+
