@@ -2,7 +2,7 @@ class Api::V1::DataController < ApplicationController
   skip_before_action :authenticate_user!
 
   def parser
-    link = DataParser::Parser.new(url_params).parsing
+    link = DataParser::Parser.new(url: url_params).parsing
     return render json: {link: link}
   end
 
